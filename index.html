@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Back2Back</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" type="image/png" href="/images/fav.png">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    
+</head>
+<body>
+
+	<div id="nav">
+		<div>
+			<h2 style="text-decoration: underline; font-family: sans-serif;">Spørgsmål</h2>
+		</div>
+
+		<div>
+			<a href="/spil.html" style="text-decoration: none; font-family: sans-serif;"><h2 >Spil</h2></a>
+		</div>
+	</div>
+	
+	<h1 id="header">Back-2-Back</h1>
+
+	<form id="add-question-form">
+			<input id="form-input" type="text" name="question" placeholder="Spørgsmål">	
+			<button id="knap">Tilføj Spørgsmål</button>
+	</form>
+	
+	<div id="seperator"></div>
+
+	<h2 id="questionHeader">Spørgsmål</h2>
+
+	<div class="content">
+	
+		
+		
+		<ul id="question-list"></ul>
+
+	</div>
+
+
+<script>
+	//Initialize Firebase
+	var firebaseConfig = {
+		apiKey: "AIzaSyDYDBhXR0AKGYMW1cLGlSCk_4-7doamn_4",
+		authDomain: "back2back-d620d.firebaseapp.com",
+		databaseURL: "https://back2back-d620d.firebaseio.com",
+		projectId: "back2back-d620d",
+		storageBucket: "back2back-d620d.appspot.com",
+		messagingSenderId: "990354904213",
+		appId: "1:990354904213:web:75dd86348ba03607"
+	};
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	  const db = firebase.firestore();
+</script>
+	
+
+	<script src="./app.js"></script>
+</body>
+
+</html>

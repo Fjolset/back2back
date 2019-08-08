@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Back2Back</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" type="image/png" href="/images/fav.png">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    
+</head>
+<body>
+
+	<div id="nav">
+		<div>
+			<a href="/index.html" style="text-decoration: none; font-family: sans-serif;"><h2 >Spørgsmål</h2></a>
+		</div>
+
+		<div>
+			<h2 style="text-decoration: underline; font-family: sans-serif;">Spil</h2>
+		</div>
+	</div>
+	
+	<a style="text-decoration: none;"><button id="nyt-spil-knap" href="/spil.html" onclick="givPoint()">NYT SPIL</button></a>
+	<div id="question-area">
+		<h1 id="question-text"></h1>
+	</div>
+	<h1 id="point">0</h1>
+	<button id="point-knap" onclick="givPoint()">POINT</button>
+	
+
+
+<script>
+	//Initialize Firebase
+	var firebaseConfig = {
+		apiKey: "AIzaSyDYDBhXR0AKGYMW1cLGlSCk_4-7doamn_4",
+		authDomain: "back2back-d620d.firebaseapp.com",
+		databaseURL: "https://back2back-d620d.firebaseio.com",
+		projectId: "back2back-d620d",
+		storageBucket: "back2back-d620d.appspot.com",
+		messagingSenderId: "990354904213",
+		appId: "1:990354904213:web:75dd86348ba03607"
+	};
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	  const db = firebase.firestore();
+</script>
+	
+
+	<script src="./app.js"></script>
+	<script src="./spil.js"></script>
+</body>
+
+</html>
