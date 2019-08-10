@@ -84,35 +84,60 @@ const questionText = document.querySelector("#question-text");
 
 let counter = 0;
 
+
+function pushQuestionsToArray()
+{
+
+  var texts = [];
+  $(function() {
+    $('ul span').each(function(){
+        texts.push($(this).text());
+    });
+  
+    console.log(texts);
+
+    var rand = texts[Math.floor(Math.random() * texts.length)];
+
+    console.log(rand);
+  
+    questionText.innerHTML = rand;
+  });
+
+
+}
+
 function givPoint()
 {
     counter +=1;
     console.log(counter);
     score.innerHTML = counter;
     // console.log(getQuestions());
+  
+  pushQuestionsToArray();
 
-    var texts = [];
-
-    $(function() {
-        $('ul span').each(function(){
-            texts.push($(this).text());
-        });
-    
-        console.log(texts);
-
-        var rand = texts[Math.floor(Math.random() * texts.length)];
-
-        console.log(rand);
-
-        questionText.innerHTML = rand;
-    });
 }
 
 function nytSpil()
 {
     counter = 0;
     score.innerHTML = counter;
-    questionText.innerHTML = "";
+    
+    
+    var texts = [];
+  $(function() {
+    $('ul span').each(function(){
+        texts.push($(this).text());
+    });
+  
+    console.log(texts);
+
+    var rand = texts[Math.floor(Math.random() * texts.length)];
+
+    console.log(rand);
+  
+    questionText.innerHTML = rand;
+  });
+
 }
 
 
