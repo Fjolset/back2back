@@ -160,6 +160,8 @@
         -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
         box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+
+        
     }
 
     #question-text
@@ -169,6 +171,8 @@
         font-size: 1.5em;
         padding-top: 30px;
         color: rgb(83, 83, 83);
+
+        
     }
 
     #point
@@ -178,6 +182,8 @@
         font-family: sans-serif;
         color: white;
         text-shadow: #0000002d;
+
+        
     }
 
     #point-knap
@@ -196,6 +202,8 @@
         -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
         box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+
+        
     }
 
     #nyt-spil-knap
@@ -217,4 +225,21 @@
         -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
         box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+
+        
+    }
+
+    .sporg
+    {
+
+    }
+
+    .spil
+    {
+        display: none;
+    }
+
+    #spilNav, #sporgNav
+    {
+        cursor: pointer;
     }

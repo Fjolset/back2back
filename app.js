@@ -1,6 +1,8 @@
 const questions = document.querySelector("#question-list");
 const form = document.querySelector("#add-question-form")
 
+let hej = 1;
+
 // Create elements and render questions
 function renderQuestions(doc)
 {
@@ -17,9 +19,12 @@ function renderQuestions(doc)
 
   questions.appendChild(li);
 
+  question.setAttribute("id", "sporgsmaal");
+
   /////TEST AREA
 
 
+  
   /////TEST AREA
 
 
@@ -71,5 +76,72 @@ db.collection("questions").onSnapshot(snapshot => {
     }
   })
 })
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const score = document.querySelector("#point");
+const questionText = document.querySelector("#question-text");
+
+let counter = 0;
+
+function givPoint()
+{
+    counter +=1;
+    console.log(counter);
+    score.innerHTML = counter;
+    // console.log(getQuestions());
+
+    var texts = [];
+
+    $(function() {
+        $('ul span').each(function(){
+            texts.push($(this).text());
+        });
+    
+        console.log(texts);
+
+        var rand = texts[Math.floor(Math.random() * texts.length)];
+
+        console.log(rand);
+
+        questionText.innerHTML = rand;
+    });
+}
+
+function nytSpil()
+{
+    counter = 0;
+    score.innerHTML = counter;
+    questionText.innerHTML = "";
+}
+
+
+
+
+
+//////////////////////////////////////////////
+
+const spilArea = document.querySelector('.spil');
+const SporgArea = document.querySelector('.sporg');
+
+function spil()
+{
+  spilArea.style.display = "block";
+  SporgArea.style.display = "none";
+
+  document.querySelector('#spilNav').style.textDecoration = "underline";
+  document.querySelector('#sporgNav').style.textDecoration = "none";
+}
+
+function sporgmaal()
+{
+  spilArea.style.display = "none";
+  SporgArea.style.display = "block";
+
+  document.querySelector('#spilNav').style.textDecoration = "none";
+  document.querySelector('#sporgNav').style.textDecoration = "underline";
+}
+
+
 
 

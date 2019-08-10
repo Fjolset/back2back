@@ -17,15 +17,16 @@
 
 	<div id="nav">
 		<div>
-			<h2 style="text-decoration: underline; font-family: sans-serif;">Spørgsmål</h2>
+			<h2 id="sporgNav" style="text-decoration: underline; font-family: sans-serif;" onclick="sporgmaal()">Spørgsmål</h2>
 		</div>
 
 		<div>
-			<a href="spil.html" style="text-decoration: none; font-family: sans-serif;"><h2 >Spil</h2></a>
+			<h2 id="spilNav" style="text-decoration: none; font-family: sans-serif;" onclick="spil()">Spil</h2>
 		</div>
 	</div>
-	
-	<h1 id="header">Back-2-Back</h1>
+
+	<div class="sporg">
+		<h1 id="header">Back-2-Back</h1>
 
 	<form id="add-question-form">
 			<input id="form-input" type="text" name="question" placeholder="Spørgsmål">	
@@ -37,12 +38,19 @@
 	<h2 id="questionHeader">Spørgsmål</h2>
 
 	<div class="content">
-	
-		
-		
 		<ul id="question-list"></ul>
-
 	</div>
+	</div>
+	
+	<div class="spil">
+		<a style="text-decoration: none;"><button id="nyt-spil-knap" href="spil.html" onclick="nytSpil()">NYT SPIL</button></a>
+	<div id="question-area">
+		<h1 id="question-text"></h1>
+	</div>
+	<h1 id="point">0</h1>
+	<button id="point-knap" onclick="givPoint()">POINT</button>
+	</div>
+	
 
 
 <script>
