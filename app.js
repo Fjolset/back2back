@@ -85,25 +85,41 @@ const questionText = document.querySelector("#question-text");
 let counter = 0;
 
 
+
+const texts = [];
+
+
+
+
+function nytSpil()
+{
+    counter = 0;
+    score.innerHTML = counter;
+    
+    $(function() {
+      $('ul span').each(function(){
+          texts.push($(this).text());
+      });
+    
+      const rand = texts[Math.floor(Math.random() * texts.length)];
+    
+      questionText.innerHTML = rand;
+    });
+}
+
 function pushQuestionsToArray()
 {
 
-  var texts = [];
   $(function() {
     $('ul span').each(function(){
         texts.push($(this).text());
     });
-  
-    console.log(texts);
-
-    var rand = texts[Math.floor(Math.random() * texts.length)];
-
-    console.log(rand);
+    const rand = texts[Math.floor(Math.random() * texts.length)];
   
     questionText.innerHTML = rand;
+    
   });
-
-
+	
 }
 
 function givPoint()
@@ -117,31 +133,13 @@ function givPoint()
 
 }
 
-function nytSpil()
+function skipTur()
 {
-    counter = 0;
+    console.log(counter);
     score.innerHTML = counter;
-    
-    
-    var texts = [];
-  $(function() {
-    $('ul span').each(function(){
-        texts.push($(this).text());
-    });
-  
-    console.log(texts);
-
-    var rand = texts[Math.floor(Math.random() * texts.length)];
-
-    console.log(rand);
-  
-    questionText.innerHTML = rand;
-  });
-
+	
+	pushQuestionsToArray();
 }
-
-
-
 
 
 //////////////////////////////////////////////
